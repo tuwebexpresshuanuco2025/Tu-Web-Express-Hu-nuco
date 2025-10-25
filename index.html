@@ -95,37 +95,87 @@
   <script src="/assets/js/index.js" defer></script>
   <script src="/assets/js/cookies.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" defer crossorigin="anonymous"></script>
-  <!-- Banner de Cookies TuWebExpress -->
-<div id="cookie-banner" style="position: fixed; bottom: 0; left: 0; right: 0; background: #0000FF; color: #fff; padding: 18px; text-align: center; font-family: sans-serif; z-index: 9999; box-shadow: 0 -2px 10px rgba(0,0,0,0.3); display: none; flex-direction: column; gap: 10px;">
-  <p style="margin: 0; font-size: 1rem;">
-    Usamos cookies para mejorar tu experiencia y analizar el tráfico. Puedes aceptar o rechazar las cookies opcionales.
-  </p>
-  <div style="margin-top: 10px; display: flex; justify-content: center; gap: 10px;">
-    <button id="accept-cookies" style="background: #fff; color: #0000FF; border: none; padding: 10px 18px; border-radius: 5px; cursor: pointer; font-weight: bold;">Aceptar</button>
-    <button id="reject-cookies" style="background: transparent; color: #fff; border: 2px solid #fff; padding: 10px 18px; border-radius: 5px; cursor: pointer;">Rechazar</button>
+<!-- Banner de Cookies Mejorado TuWebExpress -->
+<style>
+#cookie-banner{position:fixed;bottom:-180px;left:50%;transform:translateX(-50%);background:#0000FF;color:#fff;padding:18px;border-radius:12px 12px 0 0;max-width:980px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;opacity:0;transition:bottom .6s ease,opacity .6s ease;z-index:9999;box-shadow:0 -2px 12px rgba(0,0,0,.3)}
+#cookie-banner.show{bottom:0;opacity:1}
+#cookie-banner p{margin:0;font-size:1rem;color:#fff}
+#cookie-banner button{padding:10px 20px;border-radius:6px;font-weight:700;cursor:pointer;border:none;transition:transform .3s ease}
+#accept-cookies{background:#fff;color:#0000FF}
+#reject-cookies{background:transparent;color:#fff;border:2px solid #fff}
+#cookie-banner button:hover{transform:scale(1.05)}
+@media(max-width:600px){#cookie-banner p{font-size:.9rem}#cookie-banner button{padding:8px 14px;font-size:.9rem}}
+</style>
+
+<div id="cookie-banner">
+  <p id="cookie-text"></p>
+  <div style="display:flex;gap:10px">
+    <button id="accept-cookies"></button>
+    <button id="reject-cookies"></button>
   </div>
 </div>
 
 <script>
-  (function() {
-    const banner = document.getElementById('cookie-banner');
-    const accepted = localStorage.getItem('cookies-choice');
-    if (!accepted) {
-      banner.style.display = 'flex';
+(function(){
+  const banner=document.getElementById('cookie-banner');
+  const textEl=document.getElementById('cookie-text');
+  const acceptBtn=document.getElementById('accept-cookies');
+  const rejectBtn=document.getElementById('reject-cookies');
+  const lang=navigator.language.startsWith('es')?'es':'en';
+  const messages={
+    es:{text:'Usamos cookies para mejorar tu experiencia y analizar tráfico. Acepta para funciones adicionales.',accept:'Aceptar',reject:'Rechazar'},
+    en:{text:'We use cookies to improve your experience and analyze traffic. Accept to enable extra features.',accept:'Accept',reject:'Reject'}
+  };
+  textEl.innerText=messages[lang].text;
+  acceptBtn.innerText=messages[lang].accept;
+  rejectBtn.innerText=messages[lang].reject;
+
+  const choice=localStorage.getItem('cookies-choice');
+  if(!choice)setTimeout(()=>banner.classList.add('show'),400);
+
+  const loadOptionalScripts=()=>{
+    if(!window.ga){
+      const gaScript=document.createElement('script');
+      gaScript.src='https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X';
+      gaScript.async=true;
+      document.head.appendChild(gaScript);
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag=gtag;
+      gtag('js',new Date());
+      gtag('config','UA-XXXXXXXXX-X');
     }
+  };
 
-    document.getElementById('accept-cookies').addEventListener('click', () => {
-      localStorage.setItem('cookies-choice', 'accepted');
-      banner.style.display = 'none';
-      // Aquí puedes activar tus scripts opcionales (por ejemplo: Google Analytics)
-    });
+  acceptBtn.addEventListener('click',()=>{
+    localStorage.setItem('cookies-choice','accepted');
+    banner.classList.remove('show');
+    setTimeout(()=>banner.remove(),600);
+    loadOptionalScripts();
+  });
 
-    document.getElementById('reject-cookies').addEventListener('click', () => {
-      localStorage.setItem('cookies-choice', 'rejected');
-      banner.style.display = 'none';
-      // No se cargan cookies opcionales
-    });
-  })();
+  rejectBtn.addEventListener('click',()=>{
+    localStorage.setItem('cookies-choice','rejected');
+    banner.classList.remove('show');
+    setTimeout(()=>banner.remove(),600);
+  });
+
+  // Animación LCP para móviles
+  window.addEventListener('load',()=>{
+    if(/Mobi|Android/i.test(navigator.userAgent)){
+      const mainContent=document.querySelector('main');
+      if(mainContent){
+        mainContent.style.opacity='0';
+        mainContent.style.transform='translateY(30px)';
+        mainContent.style.transition='opacity .6s ease, transform .6s ease';
+        setTimeout(()=>{
+          mainContent.style.opacity='1';
+          mainContent.style.transform='translateY(0)';
+        },100);
+      }
+    }
+  });
+})();
 </script>
 </body>
 </html>
