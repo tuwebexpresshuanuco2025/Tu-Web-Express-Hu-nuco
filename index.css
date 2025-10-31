@@ -25,7 +25,7 @@ header {
   text-align: center;
   padding: 20px;
   background: var(--negro);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 2px solid rgba(0,0,0,0.15);
 }
 
 h1 {
@@ -254,33 +254,16 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .button {
-    width: 100%;
-    padding: 12px 0;
-  }
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  .button { width: 100%; padding: 12px 0; }
 }
 
-/* 🔵 Forzar color azul puro en todos los enlaces (incluidos visitados y modo oscuro) */
+/* 🔵 Forzar color azul en todos los enlaces, incluso los visitados */
 a,
 a:visited,
 a:hover,
 a:active {
-  color: #0000FF !important;
-  text-decoration: none;
-}
-
-.dark-mode a,
-.dark-mode a:visited,
-.dark-mode a:hover,
-.dark-mode a:active {
   color: #0000FF !important;
   text-decoration: none;
   }
