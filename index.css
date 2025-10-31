@@ -39,3 +39,11 @@ footer a:hover{text-decoration:underline}
   h2{font-size:1.3rem}
   .button{width:100%;padding:12px 0}
 }
+/* 🔵 Forzar color azul en todos los enlaces */
+a,
+a:visited,
+a:hover,
+a:active {
+  color: #0000FF;
+  text-decoration: none;
+}
