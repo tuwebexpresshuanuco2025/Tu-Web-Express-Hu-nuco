@@ -2,9 +2,15 @@ README.md:
 
 # TuWebExpress Huánuco
 
-Bienvenido a **TuWebExpress Huánuco**, tu solución profesional para páginas web elegantes y funcionales. Creamos sitios web personalizados para empresas, emprendedores y servicios de ingeniería, asegurando que tu negocio tenga presencia online destacada y moderna.
+Bienvenido a **TuWebExpress Huánuco**, tu solución profesional para páginas web elegantes y funcionales.  
+Creamos sitios web personalizados para empresas, emprendedores y servicios de ingeniería, asegurando que tu negocio tenga presencia online destacada y moderna.
 
-## Servicios
+## 🎨 Estilo visual
+
+- **Títulos:** color `#0000FF` (azul profesional)  
+- **Descripciones y texto normal:** color blanco para excelente contraste y legibilidad  
+
+## 🚀 Servicios
 
 - Diseño web personalizado y responsivo  
 - Integración con redes sociales  
@@ -15,22 +21,22 @@ Bienvenido a **TuWebExpress Huánuco**, tu solución profesional para páginas w
 - Formularios de contacto interactivos con alertas  
 - Sistema de comentarios con almacenamiento local  
 
-## Portafolio
+## 💼 Portafolio
 
 Nuestros proyectos destacan por su diseño limpio, minimalista y profesional:
 
 | Proyecto         | Descripción |
-|-----------------|-------------|
-| Sitio Corporativo | Página elegante para empresas |
-| Landing Page      | Orientada a conversión de clientes |
-| E-commerce        | Tienda online responsiva |
-| Blog Profesional  | Contenido estructurado y optimizado |
+|------------------|-------------|
+| **Sitio Corporativo** | Página elegante para empresas |
+| **Landing Page**      | Orientada a conversión de clientes |
+| **E-commerce**        | Tienda online responsiva |
+| **Blog Profesional**  | Contenido estructurado y optimizado |
 
-## Sistema de Comentarios
+## 💬 Sistema de Comentarios
 
-Permite agregar comentarios fácilmente con validación de campos obligatorios, almacenamiento local y alertas visuales.
+Permite agregar comentarios fácilmente con validación de campos obligatorios, almacenamiento local y alertas visuales atractivas.
 
-## Estructura de Archivos
+## 📁 Estructura de Archivos
 
 | Archivo       | Descripción |
 |---------------|-------------|
@@ -40,7 +46,7 @@ Permite agregar comentarios fácilmente con validación de campos obligatorios, 
 | `logo.png`    | Logo oficial de TuWebExpress Huánuco |
 | `README.md`   | Información completa del proyecto |
 
-## Contacto
+## 📞 Contacto
 
 Contáctanos para crear tu página web hoy mismo:
 
@@ -48,27 +54,11 @@ Contáctanos para crear tu página web hoy mismo:
 - **Teléfono / WhatsApp:** +51 981601075  
 - **Facebook:** [TuWebExpress Huánuco](https://www.facebook.com/TuWebExpressHuanuco)  
 - **Instagram:** [TuWebExpress Huánuco](https://www.instagram.com/TuWebExpressHuanuco)  
-- **Sitio web:** [https://tuwebexpresshuanuco.netlify.app/](https://tuwebexpresshuanuco.netlify.app/)  
-
-## Hecho con ❤️ por  
-**TuWebExpress Huánuco**  
-_"Llevamos tu marca al siguiente nivel digital."_  
-
-© 2025 TuWebExpress Huánuco — Todos los derechos reservados.nuco.netlify.app/](https://tuwebexpresshuanuco.netlify.app/)  
-
-## Nota
-
-El dominio personalizado o hosting premium puede tener un costo adicional, gestionado mediante proveedores externos como Google Domains o Netlify.
+- **Sitio web:** [https://tuwebexpresshuanuco.netlify.app](https://tuwebexpresshuanuco.netlify.app)  
 
 ---
 
-## ❤️ Hecho con pasión por  
-**TuWebExpress Huánuco**  
-_"Llevamos tu marca al siguiente nivel digital."_
-
-© 2025 TuWebExpress Huánuco — Todos los derechos reservados.lizadas para mejorar el diseño |
-
-## Tecnologías utilizadas
+## 💻 Tecnologías utilizadas
 
 - **HTML5** y **CSS3** con animaciones y efectos modernos  
 - **JavaScript ES6+** para interacción avanzada y almacenamiento local  
@@ -76,19 +66,19 @@ _"Llevamos tu marca al siguiente nivel digital."_
 - **Google Fonts** para tipografía profesional  
 - Compatible con todos los navegadores modernos y dispositivos móviles  
 
-## Instrucciones de instalación
+## ⚙️ Instrucciones de instalación
 
 1. Clonar o descargar el repositorio  
 2. Abrir `index.html` en cualquier navegador moderno  
-3. Asegurarse de que `style.css` e `index.js` estén correctamente vinculados  
+3. Asegurarse de que `index.css` e `index.js` estén correctamente vinculados  
 4. Configurar dominios propios si se desea un enlace personalizado  
 
-## Futuras mejoras
+## 🔮 Futuras mejoras
 
 - Integración con bases de datos para comentarios persistentes  
 - Panel administrativo para moderación de contenido  
 - SEO avanzado y análisis de tráfico con Google Analytics  
-- Optimización de velocidad y rendimiento con lazy loading  
+- Optimización de velocidad y rendimiento con *lazy loading*  
 - Versiones multilingües  
 
 ---
