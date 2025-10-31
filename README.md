@@ -54,7 +54,7 @@ Contáctanos para crear tu página web hoy mismo:
 - **Teléfono / WhatsApp:** +51 981601075  
 - **Facebook:** [TuWebExpress Huánuco](https://www.facebook.com/TuWebExpressHuanuco)  
 - **Instagram:** [TuWebExpress Huánuco](https://www.instagram.com/TuWebExpressHuanuco)  
-- **Sitio web:** [https://tuwebexpresshuanuco.netlify.app](https://tuwebexpresshuanuco.netlify.app)  
+- **Sitio web:** [https://tuwebexpresshuanuco2025official.netlify.app/](https://tuwebexpresshuanuco2025official.netlify.app/)  
 
 ---
 
