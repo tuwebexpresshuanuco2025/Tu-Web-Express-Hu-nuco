@@ -1,150 +1,224 @@
-:root {
-  --azul: #0000FF;
-  --negro: #000000;
-  --blanco: #FFFFFF;
-}
+:root {  
+  --azul: #0000FF;  
+  --negro: #000000;  
+  --blanco: #FFFFFF;  
+}  
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* {  
+  box-sizing: border-box;  
+  margin: 0;  
+  padding: 0;  
+}  
 
-html, body {
-  height: 100%;
-  background-color: var(--negro) !important;
-  color: var(--blanco);
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-}
+html, body {  
+  height: 100%;  
+  background-color: var(--negro) !important;  
+  color: var(--blanco);  
+  font-family: 'Montserrat', sans-serif;  
+  line-height: 1.6;  
+}  
 
-header {
-  text-align: center;
-  padding: 20px;
-  background: var(--negro);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
-}
+header {  
+  text-align: center;  
+  padding: 20px;  
+  background: var(--negro);  
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);  
+}  
 
-h1 {
-  color: var(--azul);
-  font-size: 2rem;
-  min-height: 1.4em;
-}
+h1 {  
+  color: var(--azul);  
+  font-size: 2rem;  
+  min-height: 1.4em;  
+}  
 
-.links {
-  margin-top: 8px;
-}
+.links {  
+  margin-top: 8px;  
+}  
 
-.links a {
-  color: var(--blanco);
-  text-decoration: none;
-  margin: 0 8px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
+.links a {  
+  color: var(--blanco);  
+  text-decoration: none;  
+  margin: 0 8px;  
+  display: inline-flex;  
+  align-items: center;  
+  gap: 6px;  
+}  
 
-.links a .icon {
-  display: inline-block;
-  width: 1.1em;
-}
+.links a .icon {  
+  display: inline-block;  
+  width: 1.1em;  
+}  
 
-.links a:hover {
-  color: var(--azul);
-}
+.links a:hover {  
+  color: var(--azul);  
+}  
 
-.contact {
-  margin-top: 8px;
-  color: #cfcfcf;
-  font-size: .95rem;
-}
+.contact {  
+  margin-top: 8px;  
+  color: #cfcfcf;  
+  font-size: .95rem;  
+}  
 
-main {
-  padding: 30px 16px 60px;
-}
+main {  
+  padding: 30px 16px 60px;  
+}  
 
-section {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 36px 10px;
-  border-bottom: 1px solid #0b0b0b;
-  min-height: 90px;
-}
+section {  
+  max-width: 980px;  
+  margin: 0 auto;  
+  padding: 36px 10px;  
+  border-bottom: 1px solid #0b0b0b;  
+  min-height: 90px;  
+}  
 
-h2 {
-  color: var(--azul);
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-  min-height: 2.2em;
-}
+h2 {  
+  color: var(--azul);  
+  font-size: 1.6rem;  
+  margin-bottom: 12px;  
+  min-height: 2.2em;  
+}  
 
-p {
-  color: #ddd;
-  font-size: 1rem;
-  margin-bottom: 14px;
-}
+p {  
+  color: #ddd;  
+  font-size: 1rem;  
+  margin-bottom: 14px;  
+}  
 
-/* --- BOTONES --- */
-.button {
-  display: inline-block;
-  background: var(--azul);
-  color: var(--blanco);
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  min-height: 42px;
-  transition: 0.3s ease;
-}
+/* --- BOTONES --- */  
+.button {  
+  display: inline-block;  
+  background: var(--azul);  
+  color: var(--blanco);  
+  padding: 10px 20px;  
+  border-radius: 8px;  
+  text-decoration: none;  
+  border: none;  
+  cursor: pointer;  
+  min-height: 42px;  
+  transition: 0.3s ease;  
+}  
 
-.button:hover {
-  background: #0055ff; /* azul más claro */
-  transform: scale(1.02);
-}
+.button:hover {  
+  background: #0055ff;  
+  transform: scale(1.02);  
+}  
 
-/* --- PROYECTOS --- */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
+/* --- PROYECTOS --- */  
+.projects {  
+  display: grid;  
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));  
+  gap: 16px;  
+}  
 
-.project img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
+.project img {  
+  width: 100%;  
+  height: auto;  
+  display: block;  
+  border-radius: 8px;  
+}  
 
-/* --- FOOTER --- */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--negro);
-  color: #888;
-  font-size: .9rem;
-}
+/* --- FOOTER --- */  
+footer {  
+  text-align: center;  
+  padding: 20px;  
+  background: var(--negro);  
+  color: #888;  
+  font-size: .9rem;  
+}  
 
-footer a {
-  color: var(--azul);
-  text-decoration: none;
-}
+footer a {  
+  color: var(--azul);  
+  text-decoration: none;  
+}  
 
-footer a:hover {
-  text-decoration: underline;
-}
+footer a:hover {  
+  text-decoration: underline;  
+}  
 
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.6rem;
+/* --- RESPONSIVE --- */  
+@media (max-width: 768px) {  
+  h1 {  
+    font-size: 1.6rem;  
+  }  
+  h2 {  
+    font-size: 1.3rem;  
+  }  
+  .button {  
+    width: 100%;  
+    padding: 12px 0;  
+  }  
+}  
+
+/* ===============================  
+   🟦 Banner de Cookies  
+   =============================== */  
+.cookie-banner {  
+  position: fixed;  
+  left: 50%;  
+  bottom: 20px;  
+  transform: translateX(-50%);  
+  background: var(--azul);  
+  color: var(--blanco);  
+  padding: 16px 20px;  
+  border-radius: 12px;  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+  gap: 10px;  
+  max-width: 90%;  
+  width: 420px;  
+  text-align: center;  
+  z-index: 10000;  
+  opacity: 0;  
+  pointer-events: none;  
+  transition: opacity 0.4s ease;  
+}  
+
+.cookie-banner.visible {  
+  opacity: 1;  
+  pointer-events: auto;  
+}  
+
+.cookie-banner p {  
+  font-size: 0.95rem;  
+  line-height: 1.4;  
+  margin: 0;  
+  color: var(--blanco);  
+}  
+
+.cookie-buttons {  
+  display: flex;  
+  justify-content: center;  
+  gap: 10px;  
+  flex-wrap: wrap;  
+}  
+
+.cookie-buttons button {  
+  border: none;  
+  border-radius: 8px;  
+  padding: 8px 14px;  
+  font-weight: 600;  
+  cursor: pointer;  
+  transition: all 0.25s ease;  
+}  
+
+.cookie-buttons .accept {  
+  background: #00ff7f;  
+  color: #000;  
+}  
+
+.cookie-buttons .reject {  
+  background: #ff4040;  
+  color: #fff;  
+}  
+
+.cookie-buttons .settings {  
+  background: #ffffff;  
+  color: var(--azul);  
+  border: 2px solid var(--azul);  
+}  
+
+.cookie-buttons button:hover {  
+  transform: scale(1.05);  
   }
-  h2 {
-    font-size: 1.3rem;
-  }
-  .button {
-    width: 100%;
-    padding: 12px 0;
-  }
-}
