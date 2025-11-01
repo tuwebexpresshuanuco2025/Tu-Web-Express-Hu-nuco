@@ -1,192 +1,101 @@
-:root {
-  --azul: #0000FF;
-  --negro: #000000;
-  --blanco: #FFFFFF;
-}
-
-/* 🔹 RESETEO BÁSICO */
+/* === ESTILOS GENERALES === */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-  height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  background: var(--negro);
-  color: var(--blanco);
+  font-family: "Poppins", Arial, sans-serif;
+  color: #222;
+  background-color: #fff;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* 🔹 ENCABEZADO */
-header {
-  text-align: center;
-  padding: 20px;
-  background: var(--negro);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.05);
-}
-
-h1 {
-  color: var(--azul);
-  font-size: 2rem;
-  min-height: 1.4em;
-}
-
-/* 🔹 SECCIONES */
-main {
-  padding: 30px 16px 60px;
-}
-
-section {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 36px 10px;
-  border-bottom: 1px solid #0b0b0b;
-  min-height: 90px;
-}
-
-h2 {
-  color: var(--azul);
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-  min-height: 2.2em;
+h1, h2, h3 {
+  color: #0000FF;
+  margin-bottom: 10px;
 }
 
 p {
-  color: #dddddd;
+  margin-bottom: 15px;
+}
+
+/* === ENCABEZADO === */
+header {
+  background: #0000FF;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* === SECCIONES === */
+section {
+  padding: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  color: #0000FF;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+section p {
   font-size: 1rem;
-  margin-bottom: 14px;
+  color: #333;
 }
 
-/* 🔹 ENLACES (FIJAR COLOR AZUL EN TODOS LOS ESTADOS) */
-a,
-a:visited,
-a:hover,
-a:active {
-  color: var(--azul) !important;
+/* === ENLACES GENERALES === */
+a, a:link, a:visited {
+  color: #0000FF !important;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* 🔹 BOTONES */
-.button {
-  display: inline-block;
-  background: var(--azul);
-  color: var(--blanco);
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  min-height: 42px;
-  transition: transform 0.2s, background 0.2s;
-}
-
-.button:hover {
-  background: #0055ff;
-  transform: scale(1.02);
-}
-
-/* 🔹 FORMULARIOS Y COMENTARIOS */
-.comments-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-.comments-form input,
-.comments-form textarea {
-  width: 92%;
-  max-width: 620px;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid var(--azul);
-  background: #111;
-  color: var(--blanco);
-}
-
-.comments-form button {
-  background: var(--azul);
-  color: var(--blanco);
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-}
-
-.comment {
-  background: #111;
-  padding: 10px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  border-left: 3px solid var(--azul);
-}
-
-/* 🔹 ALERTAS */
-.alert {
-  display: none;
-  background: var(--azul);
-  color: #000;
-  padding: 10px;
-  border-radius: 8px;
-  margin: 10px auto;
-  max-width: 620px;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.35s;
-}
-
-/* 🔹 PIE DE PÁGINA */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--negro);
-  color: #888;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: var(--azul) !important;
-  text-decoration: none;
-}
-
-footer a:hover {
+a:hover, a:focus {
+  color: #0020AA !important;
   text-decoration: underline;
 }
 
-/* 🔹 MODO OSCURO */
-.dark-mode {
-  background: #111;
-  color: #00ffff;
+/* === BOTÓN "VOLVER AL INICIO" === */
+a.volver,
+a.volver:link,
+a.volver:visited,
+a.volver:hover,
+a.volver:active {
+  display: inline-block;
+  background: transparent !important;
+  color: #0000FF !important;
+  border: 2px solid #0000FF;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+  margin: 20px auto;
 }
 
-.dark-mode h2 {
-  color: #00ffff;
+a.volver:hover {
+  background: #0000FF !important;
+  color: #FFFFFF !important;
 }
 
-.dark-mode .button {
-  background: #00ffff;
-  color: #000;
+/* === PIE DE PÁGINA === */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #f8f8f8;
+  color: #444;
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  margin-top: 40px;
 }
-
-.dark-mode .comment {
-  background: #222;
-  border-left-color: #00ffff;
-}
-
-/* 🔹 RESPONSIVE */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.6rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  .button {
-    width: 100%;
-    padding: 12px 0;
-  }
-  }
