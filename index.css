@@ -1,177 +1,92 @@
-/* ===========================
-   TuWebExpress Huánuco - index.css
-   Tema oscuro (fondo negro), acentos azul #0000FF
-   =========================== */
-
-/* Variables */
-:root{
-  --azul: #0000FF;
-  --negro: #000000;
-  --negro-2: #0b0b0b;
-  --blanco: #FFFFFF;
-  --gris: #dddddd;
-  --muted: #888888;
+/* =============================
+   Estilos generales
+============================= */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.6;
 }
 
-/* Reset básico */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family: 'Montserrat', sans-serif;
-  background:var(--negro);
-  color:var(--blanco);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  -webkit-text-size-adjust:100%;
+/* =============================
+   Encabezado
+============================= */
+header {
+  background-color: #0000ff; /* Azul */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
 }
 
-/* Header */
-header{
-  background:var(--negro);
-  color:var(--blanco);
-  text-align:center;
-  padding:20px 16px;
-  border-bottom:2px solid rgba(255,255,255,0.03);
-}
-header h1{
-  color:var(--azul);
-  font-size:2rem;
-  margin-bottom:6px;
+/* =============================
+   Secciones de contenido
+============================= */
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* Small nav links inside header */
-.links{
-  margin-top:8px;
+h1, h2 {
+  color: #0000ff; /* Azul */
 }
-.links a{
-  color:var(--blanco);            /* header links white */
-  text-decoration:none;
-  margin:0 8px;
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-}
-.links a:hover{ color:var(--azul) }
 
-/* Contact line */
-.contact{ margin-top:8px; color:#cfcfcf; font-size:.95rem }
-
-/* Main / sections */
-main{ padding:30px 16px 60px }
-section{
-  max-width:980px;
-  margin:0 auto;
-  padding:36px 10px;
-  border-bottom:1px solid var(--negro-2);
-  min-height:90px;
-}
-h2{ color:var(--azul); font-size:1.6rem; margin-bottom:12px }
-p{ color:#ddd; font-size:1rem; margin-bottom:14px }
-
-/* Button general */
-.button{
-  display:inline-block;
-  background:var(--azul);
-  color:var(--blanco);
-  padding:10px 20px;
-  border-radius:8px;
-  text-decoration:none;
-  border:none;
-  cursor:pointer;
-  min-height:42px;
-  transition:transform .15s, background .15s;
-}
-.button:hover{ background:#0055ff; transform:scale(1.02) }
-
-/* Forms / comments */
-.comments-form{ display:flex; flex-direction:column; gap:10px; align-items:center }
-.comments-form input,.comments-form textarea{
-  width:92%; max-width:620px; padding:10px; border-radius:6px;
-  border:1px solid var(--azul); background:#111; color:var(--blanco);
-}
-.comments-form button{ background:var(--azul); color:var(--blanco); padding:10px 20px; border-radius:8px; border:none; cursor:pointer }
-.comments-list{ max-width:720px; margin:14px auto; text-align:left }
-.comment{ background:#111; padding:10px; border-radius:8px; margin-bottom:10px; border-left:3px solid var(--azul) }
-
-/* Alert box */
-.alert{ display:none; background:var(--azul); color:#000; padding:10px; border-radius:8px; margin:10px auto; max-width:620px; text-align:center; opacity:0; transition:opacity .35s }
-
-/* Theme toggle / cookie banner */
-.theme-toggle{
-  position:fixed; bottom:20px; right:20px; padding:10px 14px; border-radius:8px;
-  background:var(--azul); color:#fff; border:none; cursor:pointer; z-index:9999;
-}
-.cookie-banner{
-  position:fixed; left:16px; right:16px; bottom:20px; background:#111; border:1px solid #222;
-  color:#ddd; padding:12px; border-radius:10px; display:none; gap:10px; align-items:center;
-  justify-content:space-between; max-width:980px; margin:0 auto; z-index:10000;
-}
-.cookie-banner p{ color:#ccc; margin-right:10px }
-.cookie-banner button{ background:var(--azul); border:none; padding:8px 12px; border-radius:8px; color:#fff; cursor:pointer }
-
-/* Footer */
-footer{
-  text-align:center; padding:20px; background:var(--negro); color:var(--muted); font-size:.9rem;
-}
-footer a{ color:var(--azul); text-decoration:none }
-footer a:hover{ text-decoration:underline }
-
-/* ---------- LINKS: comportamiento global ---------- */
-/* Por defecto la mayoría de enlaces del sitio serán azules.
-   Algunas secciones (header .links) usan links blancos, definidos arriba. */
-a, a:link, a:visited, a:hover, a:active {
-  color: var(--azul);
+/* =============================
+   Enlaces generales
+============================= */
+a {
+  color: #0000ff;
   text-decoration: none;
 }
 
-/* Hover general (suave) */
-a:hover, a:focus {
-  color: #3399FF;
+a:hover {
   text-decoration: underline;
 }
 
-/* ---------- "Volver al inicio" — estilo específico ---------- */
-/* Queremos: texto BLANCO, sin fondo ni borde por defecto.
-   Al hover: fondo azul y texto blanco (indicador táctil). */
-a.volver,
-a.volver:link,
-a.volver:visited,
-a.volver:hover,
-a.volver:active {
-  color: var(--blanco) !important;         /* texto blanco por defecto */
-  background: transparent !important;      /* sin fondo */
-  border: none !important;                 /* sin borde */
-  text-decoration: none !important;
+/* =============================
+   Botón "Volver al inicio"
+============================= */
+.volver-inicio {
   display: inline-block;
-  padding: 0;                              /* si quieres espacio, añade margin en el contenedor */
-  font-weight: 500;
-  transition: background .18s ease, color .18s ease;
+  background-color: #0000ff; /* Fondo azul */
+  color: white;              /* Texto blanco siempre */
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease;
 }
 
-/* Hover/tap: indicar acción */
-a.volver:hover,
-a.volver:active {
-  color: var(--blanco) !important;         /* mantener texto blanco en hover si prefieres */
-  background: rgba(255,255,255,0.06) !important; /* suave fondo para indicar interacción */
+.volver-inicio:hover,
+.volver-inicio:active,
+.volver-inicio:focus {
+  background-color: #0000ff; /* Mantiene azul */
+  color: white;              /* Mantiene blanco */
+  transform: scale(1.05);    /* Pequeña animación */
 }
 
-/* Si prefieres que en hover el texto pase a azul y el fondo blanco, reemplaza la regla anterior por:
-a.volver:hover, a.volver:active {
-  color: var(--azul) !important;
-  background: var(--blanco) !important;
+/* =============================
+   Pie de página
+============================= */
+footer {
+  background-color: #0000ff;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
 }
-*/
 
-/* Dark-mode compatibility (si usas toggles) */
-.dark-mode { background: #111; color: #00ffff; }
-.dark-mode h2 { color: #00ffff; }
-.dark-mode .button { background: #00ffff; color: #000; }
-.dark-mode .comment { background: #222; border-left-color: #00ffff; }
+/* =============================
+   Adaptabilidad (móvil)
+============================= */
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
 
-/* Responsive */
-@media (max-width:768px){
-  h1{ font-size:1.6rem }
-  h2{ font-size:1.3rem }
-  .button{ width:100%; padding:12px 0 }
+  header h1 {
+    font-size: 1.5rem;
+  }
 }
