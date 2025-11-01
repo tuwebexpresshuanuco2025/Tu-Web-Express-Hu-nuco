@@ -1,92 +1,147 @@
-/* =============================
-   Estilos generales
-============================= */
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+:root {
+  --azul: #0000FF;
+  --negro: #000000;
+  --blanco: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #222;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--negro) !important; /* fuerza fondo negro */
+  color: var(--blanco) !important;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
 }
 
-/* =============================
-   Encabezado
-============================= */
 header {
-  background-color: #0000ff; /* Azul */
-  color: white;
   text-align: center;
-  padding: 20px 0;
-}
-
-/* =============================
-   Secciones de contenido
-============================= */
-section {
   padding: 20px;
-  max-width: 900px;
-  margin: auto;
+  background: var(--negro);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.15);
 }
 
-h1, h2 {
-  color: #0000ff; /* Azul */
+h1 {
+  color: var(--azul);
+  font-size: 2rem;
+  min-height: 1.4em;
 }
 
-/* =============================
-   Enlaces generales
-============================= */
-a {
-  color: #0000ff;
+.links {
+  margin-top: 8px;
+}
+
+.links a {
+  color: var(--blanco);
   text-decoration: none;
+  margin: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* =============================
-   Botón "Volver al inicio"
-============================= */
-.volver-inicio {
+.links a .icon {
   display: inline-block;
-  background-color: #0000ff; /* Fondo azul */
-  color: white;              /* Texto blanco siempre */
+  width: 1.1em;
+}
+
+.links a:hover {
+  color: var(--azul);
+}
+
+.contact {
+  margin-top: 8px;
+  color: #cfcfcf;
+  font-size: .95rem;
+}
+
+main {
+  padding: 30px 16px 60px;
+}
+
+section {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 36px 10px;
+  border-bottom: 1px solid #0b0b0b;
+  min-height: 90px;
+}
+
+h2 {
+  color: var(--azul);
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  min-height: 2.2em;
+}
+
+p {
+  color: #ddd;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.button {
+  display: inline-block;
+  background: transparent;
+  color: var(--blanco);
+  border: 2px solid var(--blanco);
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: bold;
-  transition: transform 0.2s ease;
+  cursor: pointer;
+  min-height: 42px;
+  transition: 0.3s ease;
 }
 
-.volver-inicio:hover,
-.volver-inicio:active,
-.volver-inicio:focus {
-  background-color: #0000ff; /* Mantiene azul */
-  color: white;              /* Mantiene blanco */
-  transform: scale(1.05);    /* Pequeña animación */
+.button:hover {
+  background: var(--blanco);
+  color: var(--negro);
+  transform: scale(1.02);
 }
 
-/* =============================
-   Pie de página
-============================= */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
 footer {
-  background-color: #0000ff;
-  color: white;
   text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
+  padding: 20px;
+  background: var(--negro);
+  color: #888;
+  font-size: .9rem;
 }
 
-/* =============================
-   Adaptabilidad (móvil)
-============================= */
-@media (max-width: 768px) {
-  section {
-    padding: 15px;
-  }
+footer a {
+  color: var(--azul);
+  text-decoration: none;
+}
 
-  header h1 {
-    font-size: 1.5rem;
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  .button {
+    width: 100%;
+    padding: 12px 0;
   }
 }
